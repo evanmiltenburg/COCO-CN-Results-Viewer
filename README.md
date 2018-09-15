@@ -20,3 +20,30 @@ If you want to download the images first, run `python download_images.py` and wa
 ## Contact
 * Tool: Emiel van Miltenburg, Tilburg University
 * Data: Xirong Li, Renmin University of China
+
+## Reference
+If you find this repository useful, please
+* Link back to it in your work.
+* Cite the original paper by Li et al. See:
+
+```
+@article{DBLP:journals/corr/abs-1805-08661,
+  author    = {Xirong Li and
+               Xiaoxu Wang and
+               Chaoxi Xu and
+               Weiyu Lan and
+               Qijie Wei and
+               Gang Yang and
+               Jieping Xu},
+  title     = {{COCO-CN} for Cross-Lingual Image Tagging, Captioning and Retrieval},
+  journal   = {CoRR},
+  volume    = {abs/1805.08661},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1805.08661},
+  archivePrefix = {arXiv},
+  eprint    = {1805.08661},
+  timestamp = {Mon, 13 Aug 2018 16:48:10 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1805-08661},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
