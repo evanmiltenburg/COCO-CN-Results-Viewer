@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Result inspection tool</title>
+<style>
+
+body {background-color: lightslategray;
+      font-family: sans-serif;}
+
+.container {background-color: white;
+            max-width: 800px;
+            margin: auto;}
+
+.header {background-color: firebrick;
+         color: white;
+         padding: 10px;}
+
+.main {padding: 10px;}
+
+.scores {font-family:monospace;}
+
+a {color:inherit;}
+
+.paddingBetweenCols td
+{
+    padding:0 15px 0 15px;
+}
+
+th {padding-top: 20px;}
+
+</style>
+</head>
+<body>
+<center>
+<div class="container">
+    <div class="header">
+        <h1>Image {{imgid}}</h1>
+{% if previous_page %}<a href="{{previous_page}}">Previous</a>{% else %}Previous{% endif %}
+-
+{% if next_page %}<a href="{{next_page}}">Next</a>{% else %}Next{% endif %}
+    </div>
+    <div class="main">
+    <img src="{{image}}" height="200px">
+
+    <table>
+    <tr><th colspan="2">Humans</th></tr>
+    {% for description in humans %}
+    <tr><td>{{loop.index}}.</td><td>{{description}}</td><tr>
+    {% endfor%}
+    <tr><th colspan="2">Machines</th></tr>
+    {% for system, description in systems.items() %}
+    <tr><td style="width:100px">{{system}}</td><td>{{description}}</td><tr>
+    {% endfor%}
+    </table>
+    
+    <table class="paddingBetweenCols">
+    <tr><th>System</th><th>CIDEr</th><th>Bleu_4</th><th>Bleu_3</th><th>Bleu_2</th><th>Bleu_1</th><th>ROUGE_L</th><th>METEOR</th></tr>
+    {% for system, scores in system_scores %}
+        <tr class="scores"><td style="font-family:sans-serif;">{{system}}</td><td>{{scores.CIDEr}}</td><td>{{scores.Bleu_4}}</td><td>{{scores.Bleu_3}}</td><td>{{scores.Bleu_2}}</td><td>{{scores.Bleu_1}}</td><td>{{scores.ROUGE_L}}</td><td>{{scores.METEOR}}</td></tr>
+    {% endfor %}
+    </table>
+    
+    </center>
+    
+    
+</div>
+</div>
+</body>
+</html>
