@@ -149,8 +149,6 @@ def item_page(imgid):
     scores = system_scores[imgid]
     image = image_data[imgid]['filename']
     
-    print(scores)
-    
     # Check if the image exists. If not, download it.
     if not os.path.isfile('./static/COCO-images/' + image):
         print("We need to download the image!")
