@@ -26,7 +26,7 @@ If you want to download the images first, run `python download_images.py` and wa
 
 ## Contact
 * Tool: Emiel van Miltenburg, Tilburg University
-* Data: Xirong Li, Renmin University of China
+* Data: Xirong Li, Renmin University of China. (See their GitHub [here](https://github.com/li-xirong/coco-cn))
 
 ## Reference
 If you find this repository useful, please
